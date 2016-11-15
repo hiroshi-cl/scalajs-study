@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.JSExport
 
 object TutorialApp extends JSApp {
   def appendPar(targetNode: dom.Node, text: String): Unit = {
-    jQuery("body").append("<p>[message]</p>")
+    jQuery("body").append(s"<p>$text</p>")
   }
   @JSExport
   def addClickedMessage(): Unit = {

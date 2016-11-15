@@ -9,6 +9,8 @@ lazy val root = (project in file(".")).
     )),
     name := "Scala.js study",
     libraryDependencies += scalaJSDom.value,
-    libraryDependencies += jQuery.value,
-    libraryDependencies += scalaTest % Test
+    libraryDependencies += scalaJSJQuery.value,
+    libraryDependencies += scalaTest % Test,
+    skip in packageJSDependencies := false,
+    jsDependencies += webJarJQuery.value
   )
