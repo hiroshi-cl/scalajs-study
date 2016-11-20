@@ -12,5 +12,8 @@ lazy val root = (project in file(".")).
     libraryDependencies += scalaJSJQuery.value,
     libraryDependencies += scalaTest % Test,
     skip in packageJSDependencies := false,
-    jsDependencies += webJarJQuery.value
+    jsDependencies += webJarJQuery.value,
+    jsDependencies += RuntimeDOM,
+    libraryDependencies += utest.value,
+    testFrameworks += utestRunner
   )
