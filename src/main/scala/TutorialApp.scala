@@ -12,6 +12,10 @@ object TutorialApp extends JSApp {
     jQuery("body").append(s"<p>$text</p>")
   }
   @JSExport
+  def _1(): Any = null
+  @JSExport
+  def _2(): Int = 10
+  @JSExport
   def addClickedMessage(): Unit = {
     appendPar(document.body, "You clicked the button!")
   }
